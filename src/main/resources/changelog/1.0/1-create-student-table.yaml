@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create student table
+      author: Turgud Guliyev
+      changes:
+        - createTable:
+            tableName: students
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    foreignKeyName: fk_student_to_student_details
+                    deleteCascade: true
+              - column:
+                  name: first_name
+                  type: varchar
+                  remarks: name of student
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar
+                  remarks: name of student
+                  constraints:
+                    nullable: false
+            remarks: Table to store information about students
