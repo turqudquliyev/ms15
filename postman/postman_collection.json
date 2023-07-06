@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "1829d510-37ef-4045-9853-4cf0b3e10d67",
+		"name": "ONE-TO-ONE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24624012"
+	},
+	"item": [
+		{
+			"name": "GET STUDENT BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE STUDENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Mursel\",\r\n  \"lastName\": \"Semedov\",\r\n  \"address\": \"Baku\",\r\n  \"age\": 20,\r\n  \"email\": \"murselsemedov@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"students"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
