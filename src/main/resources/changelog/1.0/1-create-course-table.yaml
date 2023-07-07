@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create course table
+      author: Turgud Guliyev
+      changes:
+        - createTable:
+            tableName: courses
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar
+                  remarks: name of course
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar
+                  remarks: address of course
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone
+                  type: varchar
+                  remarks: phone of course
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar
+                  remarks: email of course
+                  constraints:
+                    nullable: false
+            remarks: Table to store information about courses

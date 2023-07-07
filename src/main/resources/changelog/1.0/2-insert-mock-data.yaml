@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      runOnChange: true
+      id: insert student table mock data
+      author: Turgud Guliyev
+      changes:
+        - sql:
+            sql: CREATE SEQUENCE course_sequence START WITH 2 INCREMENT BY 1 NO MAXVALUE NO MINVALUE CACHE 1;
+        - sql:
+            sql: CREATE SEQUENCE training_sequence START WITH 3 INCREMENT BY 1 NO MAXVALUE NO MINVALUE CACHE 1;
+        - sql:
+            sql: INSERT INTO courses (id, name, address, phone, email) VALUES (1,'Ingress Academy','Bul Bul Avenue 56A','+994775999940','info@ingress.az');
+        - sql:
+            sql: INSERT INTO trainings (id, name, price, course_id) VALUES (1,'Java OCA',200,1);
+        - sql:
+            sql: INSERT INTO trainings (id, name, price, course_id) VALUES (2,'Microservice Development',300,1);

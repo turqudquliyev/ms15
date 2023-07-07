@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: create a training table
+      author: Turgud Guliyev
+      changes:
+        - createTable:
+            tableName: trainings
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar
+                  remarks: name of training
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: int
+                  remarks: price of training
+                  constraints:
+                    nullable: false
+              - column:
+                  name: course_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_courses_to_trainings
+                    references: courses(id)
+                    nullable: false
+            remarks: Table to store information about trainings
