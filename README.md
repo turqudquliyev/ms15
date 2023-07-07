@@ -1,8 +1,9 @@
 ## Run
-   Execute this command on terminal
+1. Execute this command on terminal
    ```bash
-   docker compose up --build -d
+   docker compose up -d
    ```
+2. Run application on IntelliJ IDEA
 
 ## Usage
 

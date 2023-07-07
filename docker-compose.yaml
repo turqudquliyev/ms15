@@ -1,20 +1,5 @@
 services:
 
-  app:
-    container_name: app
-    build:
-      dockerfile: Dockerfile
-    ports:
-      - '8080:8080'
-    depends_on:
-      - postgres
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/my_db
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: password
-    networks:
-      - ms_network
-
   postgres:
     container_name: db
     image: 'postgres:latest'
@@ -26,12 +11,6 @@ services:
       - '5432:5432'
     volumes:
       - db_data:/var/lib/postgresql/data
-    networks:
-      - ms_network
-
-networks:
-  ms_network:
-    driver: bridge
 
 volumes:
   db_data:
